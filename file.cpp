@@ -4,9 +4,6 @@
 using namespace std;
 
 int main() {
-   cout << "Enter a char :: ";
-   char ch;
-   cin >> ch;
-   Game play(ch);
-   play.choose();
+   Game play;
+   play.start();
 }

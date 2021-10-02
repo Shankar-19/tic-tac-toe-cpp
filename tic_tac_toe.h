@@ -15,6 +15,11 @@ private:
 		for(int i = 0; i != SQUARES; ++i)
 			gameBoard += ch;
 	}
+	void display();
+	void gameLoop(char ch);
+	void set(int pos, char ch);
+	char gameState();
+
 public:
 	Game() {
 		setDisplay(displayChar);
@@ -22,11 +27,7 @@ public:
 	Game(char ch) {
 		setDisplay(ch);	
 	}
-	void display();
-	void choose();
-	void gameLoop(char ch);
-	void set(int pos, char ch);
-	char gameState();
+	void start();
 };
 
 void Game::display() {
@@ -38,7 +39,7 @@ void Game::display() {
 	}
 }
 
-void Game::choose() {
+void Game::start() {
 	display();
 	char ch = '\0';
 	while(true) {
